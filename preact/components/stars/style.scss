@@ -1,0 +1,7 @@
+.stars {
+  white-space: nowrap;
+
+  svg:not(:last-child) {
+    margin-right: 5px;
+  }
+}

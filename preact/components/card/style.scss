@@ -1,0 +1,22 @@
+@import 'styles/grid.scss';
+
+.Card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  color: theme('palette.grey.900');
+  background-color: theme('palette.common.white');
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 40px 20px;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    padding: 30px 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+}

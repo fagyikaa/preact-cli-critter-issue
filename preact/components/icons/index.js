@@ -1,0 +1,11 @@
+export { default as SearchIcon } from './search';
+export { default as ArrowIcon } from './arrow';
+export { default as AngleIcon } from './angle';
+export { default as FacebookIcon } from './facebook';
+export { default as GithubIcon } from './github';
+export { default as LinkedinIcon } from './linkedin';
+export { default as TwitterIcon } from './twitter';
+export { default as FistIcon } from './fist';
+export { default as StarIcon } from './star';
+export { default as G2CrowdIcon } from './g2-crowd';
+export { default as CapterraIcon } from './capterra';

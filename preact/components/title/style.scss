@@ -1,0 +1,24 @@
+@import 'styles/font.scss';
+
+.TitleHeader {
+  font-family: $poppins;
+  text-align: center;
+  margin: auto;
+  color: theme('palette.primary.dark');
+  font-weight: bold;
+  font-size: 2.125rem;
+  line-height: 2.5rem;
+  max-width: 23.8125rem;
+  max-height: 5rem;
+}
+
+.SubTitle {
+  font-family: $inter;
+  text-align: center;
+  margin: 1.875rem auto 3.8125rem auto;
+  width: 300px;
+  color: theme('palette.grey.500');
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}

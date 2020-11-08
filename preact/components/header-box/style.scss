@@ -1,0 +1,128 @@
+@import "styles/grid.scss";
+
+.HeaderBox {
+  background-color: theme("palette.primary.main");
+  border-radius: 276px 0 0 0;
+  height: 1727px;
+  width: 104%;
+  position: absolute;
+  transform: rotate(-174.44deg);
+  top: -1216px;
+  left: 21px;
+  display: flex;
+
+  @media only screen and (min-width: $breakpoint-small) {
+    height: 1876px;
+  }
+}
+
+.IllustrationHero {
+  @media only screen and (max-width: $breakpoint-med) {
+    .HeaderBox {
+      width: 136%;
+    }
+
+    .HeaderBox::after {
+      content: "";
+      background-image: url(/assets/hero/illustration-hero.svg);
+      background-size: 784px 467px;
+      background-repeat: no-repeat;
+      z-index: 1;
+      height: 1547px;
+      width: 103%;
+      transform: rotate(-187deg);
+      background-position-x: -10px;
+      background-position-y: 995px;
+      opacity: 0.4;
+
+      @media only screen and (min-width: $breakpoint-small) {
+        background-position-y: 880px;
+      }
+
+      @media only screen and (min-width: $breakpoint-med) {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
+    .HeaderBox {
+      width: 114%;
+    }
+
+    .HeaderBox::after {
+      background-position-x: 4px;
+      background-position-y: 1028px;
+    }
+  }
+}
+
+.ReverseIllustrationHero {
+  @media only screen and (max-width: $breakpoint-med) {
+    .HeaderBox::after {
+      content: '';
+      background-image: url(/assets/hero/illustration-hero.svg);
+      background-repeat: no-repeat;
+      z-index: 1;
+      height: 1547px;
+      width: 110%;
+      transform: rotate(185deg);
+      background-position-x: 160px;
+      background-position-y: 1025px;
+      opacity: 0.4;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large) {
+    .HeaderBox::after {
+      background-position-x: 200px;
+      background-position-y: 1028px;
+    }
+  }
+}
+
+.Inverted {
+  .HeaderBox {
+    width: 130%;
+    left: -115px;
+    top: -1280px;
+    height: 1876px;
+    border-radius: 0 276px 0 0;
+    transform: rotate(174.44deg);
+
+    @media (min-width: 372px) {
+      top: -1390px;
+    }
+  }
+}
+
+.Flat {
+  .HeaderBox {
+    width: auto;
+    border-radius: 0 50px 0 0;
+    transform: rotate(178deg);
+    left: -35px;
+    height: 1876px;
+    top: -1810px;
+    right: 0;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 0 250px 0 0;
+      left: -140px;
+      top: -1785px;
+    }
+  }
+}
+
+.IllustrationFaq {
+  .HeaderBox::after {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 110%;
+    transform: rotate(185deg);
+    background-position: bottom right 15%;
+  }
+}

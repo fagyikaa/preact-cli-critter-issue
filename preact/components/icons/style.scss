@@ -1,0 +1,48 @@
+.openClose {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  .horizontalLine {
+    height: 20px;
+    position: absolute;
+    right: 9px;
+    border-left: 2px solid theme('palette.primary.dark');
+  }
+
+  .verticalLine {
+    width: 20px;
+    position: absolute;
+    border-top: 2px solid theme('palette.primary.dark');
+    top: 9px;
+  }
+
+  &.closed {
+    .verticalLine {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(-90deg);
+    }
+
+    .horizontalLine {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(-90deg);
+      opacity: 1;
+    }
+  }
+
+  &.opened {
+    opacity: 1;
+
+    .verticalLine {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+
+    .horizontalLine {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(90deg);
+    }
+  }
+}

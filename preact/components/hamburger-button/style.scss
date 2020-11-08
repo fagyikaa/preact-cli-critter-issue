@@ -1,0 +1,66 @@
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  hr {
+    border-radius: 4px;
+    height: 2px;
+    background: theme('palette.common.white');
+  }
+}
+
+.close {
+  padding: 8px;
+
+  hr:first-child {
+    margin-bottom: -1px;
+    transform: rotate(45deg);
+  }
+
+  hr:last-child {
+    margin-top: -1px;
+    transform: rotate(-45deg);
+  }
+}
+
+.open {
+  padding: 0 8px;
+
+  hr:first-child {
+    transform: translateY(-4px);
+  }
+
+  hr:last-child {
+    transform: translateY(4px);
+  }
+}
+
+.hamburgerButton {
+  position: relative;
+  border-radius: 4px;
+  height: 43px;
+  width: 43px;
+  border: 2px solid theme('palette.common.white');
+  background-color: transparent;
+
+  &.disabled {
+    cursor: not-allowed;
+    color: theme('palette.primary.darken');
+    border-color: theme('palette.primary.darken');
+    background-color: transparent;
+
+    hr {
+      background: theme('palette.primary.darken');
+    }
+  }
+
+  &:hover:not(.disabled) {
+    background-color: theme('palette.primary.deepDark');
+  }
+}
