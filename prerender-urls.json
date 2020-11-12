@@ -2,5 +2,9 @@
   {
     "url": "/",
     "title": "Home"
+  },
+  {
+    "url": "/test",
+    "title": "Home2"
   }
 ]

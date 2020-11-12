@@ -1,0 +1,175 @@
+@import 'styles/grid.scss';
+@import 'styles/font.scss';
+
+.Wrapper {
+  z-index: 1;
+  position: relative;
+}
+
+.Hero {
+  margin-top: 56px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.HeroContainer {
+  margin: 0;
+}
+
+.HeroTitle {
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: bold;
+  color: theme('palette.primary.dark');
+  margin-left: 0;
+
+  > h1 {
+    font-size: 3.375rem;
+    width: 30.625rem;
+    margin-bottom: 1.25rem;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 0;
+
+    > h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  strong {
+    display: block;
+    width: 550px;
+    margin-bottom: -18px;
+    color: theme('palette.common.white');
+  }
+
+  > p {
+    margin-left: 0.625rem;
+    font-family: $poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: theme('palette.common.white');
+    margin-bottom: 2rem;
+  }
+
+  .FistIcon {
+    margin-left: 10px;
+  }
+
+  .HeroInput {
+    width: 380px;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.HeroImageContainer {
+  opacity: 1;
+  position: absolute;
+  top: -53px;
+  right: -455px;
+  z-index: -1;
+  width: 1205px;
+  display: none;
+
+  @media only screen and (max-width: $breakpoint-med) {
+    opacity: 0.5;
+    display: block;
+  }
+}
+
+.SvgAnimationContainer {
+  opacity: 1;
+  position: absolute;
+  top: -127px;
+  right: -455px;
+  z-index: -1;
+  width: 1205px;
+  display: none;
+
+  @media only screen and (min-width: $breakpoint-med) {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.Illustration {
+  float: left;
+  width: 857px;
+  height: 510px;
+
+  @media (min-width: $breakpoint-med) {
+    display: none;
+  }
+}
+
+.TrustedBrands {
+  margin-top: 265px;
+  margin-bottom: 80px;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    margin-top: 56px;
+  }
+
+  .TrustedBrandsTitle {
+    margin-bottom: 20px;
+    font-family: $inter;
+    line-height: 1.25rem;
+    text-transform: capitalize;
+    font-size: 0.625rem;
+    height: 1.25rem;
+    width: 100%;
+    color: theme('palette.grey.500');
+  }
+}
+
+.IconScroll,
+.IconScroll::before {
+  position: absolute;
+  margin: auto;
+}
+
+.IconScroll {
+  width: 30px;
+  height: 50px;
+  bottom: 10px;
+  border: 2px solid theme('palette.common.white');
+  border-radius: 25px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  @media (min-width: $breakpoint-med) {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: theme('palette.common.white');
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}

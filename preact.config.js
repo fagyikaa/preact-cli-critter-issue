@@ -8,6 +8,11 @@ const sassUtils = nodeSassUtils(sass);
 
 export default {
   webpack(config, env, helpers, options) {
+
+    // if (!env.ssr) {
+    //   config.module.rules.pop();
+    // }
+
     config.resolve.alias = {
       ...config.resolve.alias,
       components: path.resolve(__dirname, 'preact', 'components'),
